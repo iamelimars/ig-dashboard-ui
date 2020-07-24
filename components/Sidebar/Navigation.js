@@ -1,12 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "next/Link";
-import { useRouter } from "next/router";
 import { Home, Compass, Tv, Notifications, Plane, Graph } from "../Svg/Svg";
 import NavLink from "./NavLink";
 
 const Navigation = () => {
-  const router = useRouter();
   return (
     <Container>
       <NavLink href="/">
