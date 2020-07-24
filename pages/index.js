@@ -13,7 +13,7 @@ export default ({ stories, feed }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const storiesRes = await fetch("http://localhost:3000/api/stories");
   const feedRes = await fetch("http://localhost:3000/api/feed");
 
