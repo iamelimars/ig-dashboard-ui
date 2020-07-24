@@ -1,42 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import fetch from "isomorphic-unfetch";
+import Stories from "../components/Main/Stories/Stories";
+import Feed from "../components/Main/Feed/Feed";
 
-import Main from "../components/Main/Main";
-import Sidebar from "../components/Sidebar/Sidebar";
-
-export default ({ stories }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+export default ({ stories, feed }) => {
   return (
     <Container>
-      <Main
-        stories={stories}
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-      />
-      <Sidebar />
+      <Stories stories={stories} />
+      <Feed feed={feed} />
     </Container>
   );
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/stories");
-  const data = await res.json();
+  const storiesRes = await fetch("http://localhost:3000/api/stories");
+  const feedRes = await fetch("http://localhost:3000/api/feed");
+
+  const feed = await feedRes.json();
+  const stories = await storiesRes.json();
 
   return {
     props: {
-      stories: data.data,
+      stories: stories.data,
+      feed: feed.data,
     },
   };
 }
 
 const Container = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: ${({ theme }) => theme.background};
-  z-index: 0;
+  position: relative;
 `;

@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Hamburger from "./Hamburger";
 import Navbar from "./Navbar";
-import Stories from "./Stories";
+import Stories from "./Stories/Stories";
+import Feed from "./Feed/Feed";
 
 const variants = {
   open: {
@@ -24,7 +25,7 @@ const spring = {
   stiffness: 200,
 };
 
-const Main = ({ isMenuOpen, setIsMenuOpen, stories }) => {
+const Main = ({ isMenuOpen, setIsMenuOpen, stories, feed }) => {
   return (
     <Container
       animate={isMenuOpen ? "open" : "closed"}
@@ -32,11 +33,8 @@ const Main = ({ isMenuOpen, setIsMenuOpen, stories }) => {
       transition={spring}
       initial={false}
     >
-      <Topbar>
-        <Hamburger isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        <Navbar />
-      </Topbar>
       <Stories stories={stories} />
+      <Feed feed={feed} />
     </Container>
   );
 };
@@ -50,6 +48,7 @@ const Container = styled(motion.div)`
   box-shadow: -49px 0px 154px rgba(27, 39, 50, 0.09);
   padding: 2rem;
   z-index: 4;
+  overflow: auto;
 `;
 
 const Topbar = styled.div`

@@ -14,12 +14,12 @@ export default ProfilePic;
 const Container = styled.div`
   height: ${({ size }) => size};
   background: linear-gradient(211.13deg, #ff766d 7.72%, #f1d571 92.1%);
-  border-radius: 2rem;
+  border-radius: 30rem;
   padding: 1px;
 
   img {
     height: 100%;
-    border-radius: 2rem;
+    border-radius: 30rem;
     border: 1px solid #ffffff;
   }
 `;

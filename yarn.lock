@@ -2253,6 +2253,11 @@ embla-carousel@^2.9.1:
   resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-2.9.1.tgz#be68ac01b34779a437d7ab902a368d1913401a35"
   integrity sha512-aAyCpbPwcR+NssMJ5tfYUMEavCOhSUfk9k/g9Qd98cAZ1d/8hju0cplEs85DtfwU6Bd+Oki1le/zMH53IVOs9w==
 
+embla-carousel@^3.0.21:
+  version "3.0.21"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-3.0.21.tgz#da104512d030a4d55b985243ac767d1f7b3b5200"
+  integrity sha512-ajR4HrU2LrkE/3eP3eE2CKP+nCVDF7omFcjQeqpd1bHAlT3Y1PCRhGrURD/4iqWQE7/wd1LKtRkkoDDwwf1zwQ==
+
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"

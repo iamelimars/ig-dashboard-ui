@@ -67,7 +67,7 @@ const AddBtn = styled(motion.a)`
   width: 20px;
   margin: 0 1.5rem;
   border-radius: 5px;
-  box-shadow: 0px 0px 27px rgba(234, 76, 137, 0.53);
+  box-shadow: 0px 0px 27px -18px rgba(234, 76, 137, 0.53);
   cursor: pointer;
 `;
 
