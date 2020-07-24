@@ -14,8 +14,8 @@ export default ({ stories, feed }) => {
 };
 
 export async function getServerSideProps() {
-  const storiesRes = await fetch("http://localhost:3000/api/stories");
-  const feedRes = await fetch("http://localhost:3000/api/feed");
+  const storiesRes = await fetch(`${process.env.HOST_URL}api/stories`);
+  const feedRes = await fetch(`${process.env.HOST_URL}api/feed`);
 
   const feed = await feedRes.json();
   const stories = await storiesRes.json();
