@@ -1,22 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import { Home, Compass, Tv, Notifications, Plane, Graph } from "../Svg/Svg";
-import NavLink from "./NavLink";
+// import NavLink from "./NavLink";
+import SidebarLink from "./SidebarLink";
 
 const Navigation = () => {
   return (
     <Container>
-      <NavLink href="/">
+      <SidebarLink href="/">
         <a>
           <Home />
           Feed
         </a>
-      </NavLink>
-      <NavLink href="/explore">
+      </SidebarLink>
+      <SidebarLink href="/explore">
         <a>
           <Compass /> Explore
         </a>
-      </NavLink>
+      </SidebarLink>
       <a>
         <Tv />
         IGTV
